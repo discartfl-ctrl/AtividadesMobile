@@ -42,7 +42,7 @@ export default function RootLayout() {
 	function botaoIgual(){
 		realisaOperacao(operacao)
 		setTelaFake('')
-/* 		setTelaFake(resultado) esta dando erro de puxar a versão antiga da varaivel resultado invez da nova são sei pq 
+/* 		setTelaFake(resultado) esta dando erro de puxar a versão antiga do resultado invez da nova são sei pq 
  */		
 	}
 	function realisaOperacao(operacao) {
@@ -78,6 +78,10 @@ export default function RootLayout() {
 			setNumero(parseInt(numero.toString() + x.toString()));
 			setTelaFake(telaFake + x.toString())
 		}
+	}
+	function zerarResultado(){
+		setResultado(0)
+		setAguardaNumero(true)
 	}
 	function somaNumero() {
 		setResultado(resultado + numero)
@@ -120,7 +124,7 @@ export default function RootLayout() {
 			</View>
 			<View style={styles.divisoria}>
 				<View>
-					<TouchableOpacity style={styles.botao} onPress={() => { setResultado(0); }}>
+					<TouchableOpacity style={styles.botao} onPress={zerarResultado}>
 						<Text>
 							C
 						</Text>
@@ -226,10 +230,9 @@ const styles = StyleSheet.create({
 	tela: {
 		backgroundColor: 'grey',
 		color: 'white',
-		marginHorizontal: 0,
 		marginVertical: 10,
 		borderRadius: 20,
-		padding: 10,
+		paddingHorizontal: 100,
 		alignSelf: 'center',
 
 	},
