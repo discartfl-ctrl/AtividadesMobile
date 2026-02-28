@@ -7,4 +7,6 @@
 - botão de clear
 - botão de igual para finalizar uma equação
 - não permitir user input sem operador, a não ser que resutlado seja null ou 0
+- display para o resultado -> temporario até resolver o problema de '=' não receber o resultado atual
+- display para as operaçoes -> quando corrigido mostrara o resultado quando pressionar '=' 
   ![prototipo](prototipo_1.png)
