@@ -75,6 +75,7 @@ export default function RootLayout() {
   }
   function zerarResultado() {
     setResultado(0)
+    setTelaFake('')
     setAguardaNumero(true)
   }
   function somaNumero() {
